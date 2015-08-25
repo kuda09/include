@@ -1,0 +1,112 @@
+.contactPage {
+  .googleMaps {
+    position: relative;
+    overflow: hidden;
+    @include rem(height, 306px);
+    width: 100%;
+  }
+
+  .contentArea {
+    @include susy-clearfix;
+    @include rem(padding, 0 10px);
+    @include rem(margin, 10px 0);
+    .container {
+      > .col {
+        @include span(1 of 3);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+        &:last-child {
+          @include span(last 2 of 3);
+          @media #{$mediaMobileLandscape} {
+            @include full;
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .contactDetails {
+    @include rem(margin, 10px 5px);
+    li {
+      i {
+        @include rem(margin-right, 10px);
+        display: inline-block;
+      }
+    }
+  }
+
+  .contactForm {
+
+    label {
+      min-width: 100%;
+      @include rem(margin-bottom, 1rem);
+      display: block;
+      @include rem(font-size, 11px);
+    }
+
+    select {
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      @include rem(padding, 8px);
+      @include rem(margin-bottom, 10px);
+      @include rem(min-width, 230px);
+      @include rem(font-size, 11px);
+      @include input-placeholder {
+        @include rem(font-size, 11px);
+      }
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=search],
+    textarea {
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      @include rem(padding, 8px);
+      @include rem(margin-bottom, 10px);
+      min-width: 100%;
+      outline: none;
+
+      @include input-placeholder {
+        @include rem(font-size, 11px);
+      }
+    }
+
+    input[type=submit] {
+      @include rem(margin, 10px 0);
+      float: right;
+      @include rem(font-size, 11px);
+
+      @extend .btn;
+      @extend .btnPrimary;
+
+    }
+
+  }
+}
+
+
+.errors {
+  color: $danger;
+  @include rem(padding, 20px 20px);
+  @include rem(margin-bottom, 20px);
+  .error {
+    border: none !important;
+  }
+}
+.error {
+  border: 1px solid $danger !important;
+}
+
+.success {
+  background-color: $green;
+  color: $white;
+  @include rem(padding, 20px 20px);
+  @include rem(margin-bottom, 20px);
+}

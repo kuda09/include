@@ -1,0 +1,82 @@
+
+/* Slider */
+
+.slick-list {
+  .slick-loading & {
+    background: #fff url("#{$imagePath}/ajax-loader.gif") center center no-repeat;
+  }
+}
+
+
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: none;
+  height: 32px;
+  width: 32px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+  &:hover, &:focus {
+    outline: none;
+  }
+  &.slick-disabled:before {
+
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -64px;
+  background-image: url("#{$imagePath}/left.png");
+  background-repeat: no-repeat;
+  [dir="rtl"] & {
+    left: auto;
+    right: -64px;
+  }
+  &:before {
+    content: '';
+    [dir="rtl"] & {
+      content: '';
+    }
+  }
+}
+
+.slick-next {
+  right: -64px;
+  background-image: url("#{$imagePath}/right.png");
+  background-repeat: no-repeat;
+
+  [dir="rtl"] & {
+    left: -64px;
+    right: auto;
+  }
+  &:before {
+    content: '';
+    [dir="rtl"] & {
+      content: '';
+    }
+  }
+}
+
+/* Dots */
+
+.slick-slider {
+ // margin-bottom: 30px;
+}
+

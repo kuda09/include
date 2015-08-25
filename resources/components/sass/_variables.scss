@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,800,100);
+@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500italic,900);
+
+//Font-Family
+$fontFamily: 'Raleway', sans-serif;
+$fontPrimary: 'Spinnaker', sans-serif;
+$headingFamily:'Roboto', sans-serif;
+
+
+//Breakpoints
+$mediaMobilePortrait: '(min-width: 280px)';
+$mediaMobileLandscape: '(min-width: 280px) and (max-width: 520px)';
+$mediaTabletPortrait: '(min-width: 521px) and (max-width: 996px)';
+$mediaLargeDesktop: '(min-width: 1280px)';
+
+
+//colors
+$bodyColor: #444444;
+$linkColor:#aaa;
+$footerBGColor:#181818;
+$footerBGColor2: #153094;
+$formBG: #333;
+$danger: #FF5C5C;
+
+
+//theme colors;
+
+$lightGreen: #007100;
+$green: #007100;
+
+
+$borderColor: #ccc;
+$white: #fff;
+$blue: #1939B2;
+$black : #000;
+$lightBlack: #1939B2;
+$grey: #ECF0F1;
+$btnColor: #1939B2;
+
+
+// files paths
+$imagePath: '../images';

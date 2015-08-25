@@ -1,0 +1,185 @@
+.siteFooter {
+  .footerRow1 {
+    @include rem(padding-top, 120px);
+    @include rem(padding-bottom, 120px);
+    background-color: $blue;
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+    h2 {
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    .footerAddressDetails {
+      list-style: none;
+      @include rem(margin-top, 28px);
+      li {
+        @include rem(margin, 10px 0);
+
+        i {
+          @include rem(margin-right, 10px);
+        }
+
+      }
+    }
+
+    .subscribe {
+      @include rem(margin-top, 28px);
+      @include susy-clearfix;
+
+      input {
+        float: left;
+        @include rem(line-height, 26px);
+        @include rem(height, 36px);
+        @include rem(padding, 5px);
+        width: 100%;
+        @include rem(margin-bottom, 10px);
+      }
+
+      .btnFooter {
+        background-color: $green;
+
+        &:hover {
+          background-color: darken($green, 5);
+        }
+      }
+    }
+
+    .container {
+      @include susy-clearfix;
+      @include rem(padding, 0 10px);
+      > .col {
+        @include span(1 of 4);
+        @include rem(padding, 0 5px);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+        @media #{$mediaTabletPortrait} {
+          @include span(1 of 2);
+          @include rem(min-height, 350px);
+        }
+
+        &:nth-child(2n) {
+          @media #{$mediaTabletPortrait} {
+            @include span(last 1 of 2);
+          }
+        }
+      }
+    }
+
+    .footer-widget {
+      font-weight: normal;
+
+      .widgetGuts {
+
+        .success {
+          background-color: $green;
+          border-radius: 0;
+          font-weight: normal;
+        }
+        .error {
+          background-color: $danger;
+          color: $white;
+          font-weight: normal;
+          border: none;
+          border-radius: 0;
+        }
+
+        input[type=text] {
+
+          border: 1px solid #c4c4c4;
+          @include rem(padding, 13px 8px 8px 8px);
+          @include rem(margin-bottom, 10px);
+          outline: none;
+          width: 100%;
+
+          @include input-placeholder {
+            @include rem(font-size, 11px);
+          }
+        }
+
+        .button {
+          @extend .btn;
+          @extend .btnGreen;
+        }
+
+      }
+    }
+  }
+
+  .footerRow2 {
+    background-color: $footerBGColor2;
+    color: $white;
+    @include rem(padding-bottom, 14px);
+    @include rem(padding-top, 14px);
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    .container {
+      @include rem(padding, 0 10px);
+      @include susy-clearfix;
+
+      > .col {
+        @include span(1 of 2);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+      }
+
+    }
+
+    .socialLinks {
+      float: right;
+      width: auto;
+
+      @media #{$mediaMobileLandscape} {
+        float: none;
+        margin: 0 auto;
+        display: table;
+      }
+
+      @media #{$mediaTabletPortrait} {
+        float: none;
+        margin: 0 auto;
+        display: table;
+      }
+      ul {
+        li {
+          display: inline-block;
+          @include rem(padding, 0 10px);
+        }
+      }
+
+      i {
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+  }
+}

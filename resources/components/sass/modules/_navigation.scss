@@ -1,0 +1,147 @@
+nav.navigation {
+  float: right;
+  @include rem(margin-top, 35px);
+
+  @media #{$mediaMobileLandscape} {
+    float: none;
+    max-height: 0;
+    @include transition(max-height, 0.5s ease-in-out);
+    overflow: hidden;
+    z-index: 100;
+    margin-top: 0;
+    &.active {
+      max-height: 800px;
+
+      .navMenu {
+        li {
+          border-bottom: 1px solid $white;
+          @include rem(margin, 7px 0);
+        }
+      }
+    }
+  }
+
+  .navMenu {
+    //@include rem(margin-top, 8px);
+    @include susy-box-sizing(border-box);
+    li {
+      display: inline-block;
+      position: relative;
+      @include rem(padding, 0 10px);
+      margin: 0;
+
+      @media #{$mediaMobileLandscape} {
+        display: block;
+
+      }
+      a {
+
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+        @include rem(line-height, 75px);
+        color: $linkColor;
+
+        @media #{$mediaMobileLandscape} {
+          @include rem(line-height, 45px);
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $green;
+        }
+        // hover
+      }
+      //a
+    }
+    //li
+
+    .active {
+      a {
+        //border-top: 10px solid $green;
+
+        @media #{$mediaMobileLandscape} {
+          border-top: none;
+        }
+      }
+    }
+
+    .search {
+      position: relative;
+
+      i {
+        @media #{$mediaMobileLandscape} {
+          display: none;
+        }
+      }
+
+      > div {
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: 0;
+        display: none;
+        z-index: 999999;
+
+        @media #{$mediaMobileLandscape} {
+          display: block;
+          position: static;
+        }
+      }
+
+      .activeSearch {
+        display: block;
+      }
+
+      .searchFormPop {
+        background-color: $formBG;
+
+        border-top: none;
+        border-radius: 4px;
+        position: relative;
+
+        @media #{$mediaMobileLandscape} {
+          border-radius: 0px;
+          @include rem(margin-bottom, 5px);
+        }
+
+        span {
+          display: none;
+        }
+
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          right: 18px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #333;
+
+          @media #{$mediaMobileLandscape} {
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+          }
+        }
+        input[type=search] {
+          background-color: transparent;
+          @include rem(padding, 9px 10px 5px 10px);
+          color: #eeeeee;
+          margin-bottom: 5px;
+          border: none;
+          width: 198px;
+          outline: none;
+        }
+
+        input.search-submit {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

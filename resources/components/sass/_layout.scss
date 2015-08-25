@@ -1,0 +1,12 @@
+.hero {
+  background-color: $green;
+  color: $white;
+  @include rem(padding, 20px 0);
+  position: relative;
+
+  h1 {
+    font-family: $fontPrimary;
+    @include rem(font-size, 36px);
+    color: $white;
+  }
+}

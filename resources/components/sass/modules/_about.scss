@@ -1,0 +1,109 @@
+$progressBarColor1: #ff9e2c;
+$progressBarColor2: #4ecdc4;
+$progressBarColor3: #ff6b6b;
+$progressBarColor4: #b472ff;
+$progressBarColor5: #6bb5ff;
+
+.aboutPage {
+  .contentArea {
+
+
+    .container {
+      @include susy-clearfix;
+      @include rem(padding, 0 10px);
+      > .col {
+        @include span(2 of 3);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+        @media #{$mediaTabletPortrait} {
+          @include span(1 of 2);
+        }
+
+        &:last-child {
+          @include span(last 1 of 3);
+
+          @media #{$mediaMobileLandscape} {
+            @include full;
+          }
+
+          @media #{$mediaTabletPortrait} {
+            @include span(1 of 2);
+          }
+        }
+      }
+    }
+
+  }
+
+  progress, progress[role] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-size: auto;
+    @include rem(height, 50px);
+    width: 100%;
+  }
+
+  .skill-list {
+    list-style: none;
+    margin: 0;
+    @include rem(padding, 1rem 0);
+
+    .skill {
+      @include rem(margin-bottom, 1rem);
+      position: relative;
+
+      h3 {
+        color: $white;
+        @include rem(line-height, 1rem);
+        position: absolute;
+        top: 3px;
+        left: 40px;
+      }
+
+      ::-webkit-progress-value {
+        @include animation-name(bar-fill);
+        @include animation-duration(2s);
+      }
+
+      .skill-1::-webkit-progress-value {
+        background: $progressBarColor1;
+      }
+
+      .skill-2::-webkit-progress-value {
+        background: $progressBarColor2;
+      }
+
+      .skill-3::-webkit-progress-value {
+        background: $progressBarColor3;
+      }
+
+      .skill-4::-webkit-progress-value {
+        background: $progressBarColor4;
+      }
+
+      .skill-5::-webkit-progress-value {
+        background: $progressBarColor5;
+      }
+    }
+
+  }
+
+}
+
+// Animation Keyframes
+@-webkit-keyframes bar-fill {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes bar-fill {
+  0% {
+    width: 0;
+  }
+}

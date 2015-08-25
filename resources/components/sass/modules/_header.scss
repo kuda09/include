@@ -1,0 +1,70 @@
+.siteHeader {
+  .headerRow2 {
+    @include rem(padding, 0 10px);
+    @include susy-clearfix;
+    background-color: $white;
+
+    .container {
+      > .col {
+        @include span(1 of 4);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+        &:last-child {
+          @include span(3 of 4 last);
+
+          @media #{$mediaMobileLandscape} {
+            @include full;
+          }
+        }
+      }
+    }
+
+    #logo {
+      @include susy-clearfix;
+
+      .logoWrapper {
+        @include span(4 of 5);
+        img {
+          display: block;
+          @include rem(margin-top, 8px);
+          @include rem(margin-bottom, 8px);
+          @include rem(width, 154px);
+          @include rem(height, 116px);
+        }
+      }
+      .menuIcon {
+        @include span(last 1 of 5);
+        cursor: pointer;
+        display: none;
+        @include rem(margin-top, 34px);
+
+        @media #{$mediaMobileLandscape} {
+          display: block;
+        }
+        svg {
+          display: block;
+          float: right;
+          #menu {
+            fill: $btnColor;
+          }
+
+          &:hover .strips {
+            fill: $btnColor;
+          }
+        }
+      }
+    }
+
+  }
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+    border-top: 0;
+  }
+}

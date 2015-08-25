@@ -1,0 +1,199 @@
+$tableColor1: #777;
+$tableColor2: #98C741;
+$tableColor3: #62AEB9;
+$tableColor3: #62AEB9;
+$tableColor3: #ED652E;
+
+.membership{
+  .contentArea {
+    @include rem(padding, 0 10px);
+    @include rem(margin-bottom, 14px);
+  }
+
+  .pricingPlanContainer {
+    @include susy-clearfix;
+    > .col {
+      @include span(1 of 3);
+
+      @media #{$mediaMobileLandscape} {
+        @include full;
+        @include rem(margin-bottom, 1rem);
+      }
+
+      @media #{$mediaTabletPortrait} {
+        @include span(1 of 2);
+        @include rem(margin-bottom, 1rem);
+      }
+    }
+
+    .pricePlanCol {
+      @include rem(width, 250px);
+      margin: 0 auto;
+      border: 4px solid $tableColor1;
+      position: relative;
+      text-align: center;
+      border-radius: 4px;
+      @include rem(min-height, 650px);
+      h4 {
+        color: $white;
+        background-color: $tableColor1;
+        margin-top: 0;
+        @include rem(font-size, 18px);
+        @include rem(line-height, 1rem);
+        @include rem(padding, 10px 0 14px);
+      }
+
+      .price {
+        @include rem(font-size, 3rem);
+        margin: 0;
+        sup {
+          @include rem(font-size, 16px);
+          font-weight: normal;
+          vertical-align: top;
+        }
+        .priceAmount {
+          font-weight: bold;
+        }
+        .term {
+          @include rem(font-size, 18px);
+        }
+      }
+
+      .buttonStack {
+        @include rem(margin, 18px auto);
+        width: 80%;
+
+        .btn {
+          @include rem(font-size, 14px);
+          @include rem(min-width, 140px);
+          @include rem(margin-bottom, 12px);
+          font-weight: normal;
+          border-radius: 3px;
+          position: relative;
+          display: block;
+        }
+
+        .btnLight {
+          background-color: $tableColor1;
+          color: $white;
+
+          &:hover {
+            background-color: $white;
+            color: $tableColor1;
+            border: 1px solid $tableColor1;
+          }
+        }
+
+        .btnDark{
+          background-color: $white;
+          color: $tableColor1;
+          border: 1px solid $tableColor1;
+
+          &:hover {
+            background-color: $tableColor1;
+            color: $white;
+          }
+        }
+
+      }
+
+      .pricePlanBullets {
+
+        li {
+          @include rem(margin-bottom, 15px);
+          @include rem(line-height, 20px);
+          @include rem(padding, 10px 10px);
+          text-align: left;
+
+          &:nth-child(odd){
+            background-color: $tableColor1;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .pricePlanCol-2 {
+      border: 4px solid $tableColor2;
+      h4 {
+        color: $white;
+        background-color: $tableColor2;
+      }
+      .buttonStack {
+        .btnLight {
+          background-color: $tableColor2;
+          color: $white;
+
+          &:hover {
+            background-color: $white;
+            color: $tableColor2;
+            border: 1px solid $tableColor2;
+          }
+        }
+
+        .btnDark{
+          background-color: $white;
+          color: $tableColor2;
+          border: 1px solid $tableColor2;
+
+          &:hover {
+            background-color: $tableColor2;
+            color: $white;
+          }
+        }
+
+      }
+
+      .pricePlanBullets {
+        li {
+          &:nth-child(odd){
+            background-color: $tableColor2;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .pricePlanCol-3 {
+      border: 4px solid $tableColor3;
+      h4 {
+        color: $white;
+        background-color: $tableColor3;
+      }
+      .buttonStack {
+        .btnLight {
+          background-color: $tableColor3;
+          color: $white;
+
+          &:hover {
+            background-color: $white;
+            color: $tableColor3;
+            border: 1px solid $tableColor3;
+          }
+        }
+
+        .btnDark{
+          background-color: $white;
+          color: $tableColor3;
+          border: 1px solid $tableColor3;
+
+          &:hover {
+            background-color: $tableColor3;
+            color: $white;
+          }
+        }
+
+      }
+
+      .pricePlanBullets {
+        li {
+          &:nth-child(odd){
+            background-color: $tableColor3;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+}

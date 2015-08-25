@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="stylesheets" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

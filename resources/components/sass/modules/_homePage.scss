@@ -1,0 +1,236 @@
+$course-color-1: #ff9e2c;
+$course-color-2: #4ecdc4;
+$course-color-3: #ff6b6b;
+$course-color-4: #b472ff;
+$course-color-5: #6bb5ff;
+
+.homeSlider {
+  background-color: $green;
+  color: $white;
+  min-height: 480px;
+  @include rem(padding, 40px 0 40px);
+
+  a {
+    color: $white;
+  }
+
+  .row1{
+    text-align: center;
+
+    h1 {
+      font-weight: bold;
+      font-family: $headingFamily;
+      @include rem(font-size, 36px);
+    }
+
+    p {
+      font-style: italic;
+      font-size: 18px;
+      @include opacity(0.5);
+    }
+
+  }
+
+  .row2{
+    @include susy-clearfix;
+
+    >.col{
+      @include span(1 of 2);
+      @include rem(padding, 20px);
+      @include border-box-sizing(border-box);
+
+      @media #{$mediaMobileLandscape} {
+        @include full;
+      }
+    }
+
+    .box {
+      @include translateY(50%);
+
+      @media #{$mediaMobileLandscape} {
+
+        @include translateY(0%);
+      }
+    }
+
+
+    .coming-soon {
+      @include rem(margin-top, 30px);
+      position: relative;
+
+      &:before {
+        content: 'learn:';
+        color: $white;
+        text-transform: uppercase;
+        @include rem(margin-right, 30px);
+
+      }
+
+      li {
+        display: inline-block;
+        @include rem(padding, 5px 10px);
+        @include rem(margin-right, 5px);
+        border-radius: 20px;
+
+        @media #{$mediaMobileLandscape} {
+
+          display: block;
+
+          @include rem(margin-bottom, 5px);
+          @include rem(padding, 10px 10px);
+        }
+
+        a {
+          &:hover{
+            text-decoration: none;
+          }
+        }
+
+        &:nth-child(1){
+           background-color: $course-color-1;
+           &:hover{
+             background-color: darken($course-color-1, 5);
+           }
+         }
+
+        &:nth-child(2){
+          background-color: $course-color-2;
+          &:hover{
+            background-color: darken($course-color-2, 5);
+          }
+        }
+
+        &:nth-child(3){
+          background-color: $course-color-3;
+          &:hover{
+            background-color: darken($course-color-3, 5);
+          }
+        }
+
+        &:nth-child(4){
+          background-color: $course-color-4;
+          &:hover{
+            background-color: darken($course-color-4, 5);
+          }
+        }
+
+        &:nth-child(5){
+          background-color: $course-color-5;
+          &:hover{
+            background-color: darken($course-color-5, 5);
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.homeContent {
+  @include susy-clearfix;
+  @include rem(padding, 120px 10px);
+  h3 {
+    @include rem(font-size, 24px);
+    font-weight: bold;
+  }
+
+  .btnSecondary {
+    background-color: $blue;
+
+    &:hover {
+      background-color: darken($blue, 5);
+    }
+  }
+
+
+
+
+  .container {
+
+    > .col {
+      @include span(1 of 3);
+      @include rem(padding, 0 10px);
+      text-align: justify;
+
+      @media #{$mediaMobileLandscape} {
+        @include full;
+      }
+
+      @media #{$mediaTabletPortrait} {
+        @include span(1 of 2);
+
+        &:last-child{
+          display: none;
+        }
+      }
+    }
+  }
+
+  
+  .service {
+    border-bottom: 1px solid transparent;
+    @include rem(margin-bottom , -1px);
+    float: left;
+    display: inline;
+    position: relative;
+    text-align: center;
+
+    img {
+
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      display: block;
+
+
+    }
+  }
+  
+}
+
+// homeContent
+
+.homeHeadline {
+  @include susy-clearfix;
+  @include rem(padding, 120px 10px);
+  background-color: #ECEEEE;
+
+  h1 {
+    @include rem(font-size, 24px);
+    font-weight: bold;
+  }
+
+  .container {
+
+    > .col {
+      @include span(2 of 3);
+
+      @media #{$mediaMobileLandscape} {
+        @include full;
+      }
+
+      @media #{$mediaTabletPortrait} {
+        @include span(1 of 2);
+      }
+
+      &:last-child {
+        @include span(last 1 of 3);
+
+        @media #{$mediaMobileLandscape} {
+          @include full;
+        }
+
+        @media #{$mediaTabletPortrait} {
+          @include span(last 1 of 2);
+        }
+      }
+    }
+  }
+
+
+
+}
+
+
+

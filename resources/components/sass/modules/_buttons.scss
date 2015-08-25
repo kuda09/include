@@ -1,0 +1,43 @@
+.btn{
+  @include rem(padding, 10px 36px);
+  text-transform: capitalize;
+  border-radius: 0px;
+  cursor: pointer;
+
+  @include transition(background-color, 0.3s ease-in-out);
+
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btnPrimary {
+  border: 1px solid $btnColor;
+  color: $white;
+  background-color: $btnColor;
+
+  &:hover {
+    background-color: darken($btnColor, 5);
+    color: $white;
+  }
+}
+
+
+.btnSecondary {
+  background-color: $btnColor;
+  color: $white;
+
+  &:hover {
+    background-color: darken($btnColor, 5);
+  }
+}
+
+.btnGreen {
+  background-color: $green;
+  color: $white;
+
+  &:hover {
+    background-color: darken($green, 5);
+  }
+}
